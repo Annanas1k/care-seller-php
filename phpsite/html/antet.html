@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Online</title>
+    <link rel="stylesheet" type="text/css" href="../css/antet.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/log.png" alt="Logo magazin" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.php?k=../php/content.php">HOME</a></li>
+                <li><a href="index.php?k=../html/adaugare.html">ADD PRODUCT</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+        <div class="search">
+            <input type="text" placeholder="Caută produse...">
+            <button type="submit">Поиск</button>
+        </div>
+        <div class="cart">
+            <div class="language-container">
+                <button class="language-button" id="toggle-language">Limbă</button>
+                <ul class="language-list" id="language-list">
+                    <li><a href="#">Română</a></li>
+                    <li><a href="#">Engleză</a></li>
+                    <li><a href="#">Spaniolă</a></li>
+                </ul>
+            </div>
+            <a href="../html/login.html">Login</a><button id="butonOprireSesiune" class="logout">Log Out</button>
+            <a href="../html/register.html">Register</a>
+            
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("butonOprireSesiune").addEventListener("click", function() {
+            // Trimite o cerere către server pentru a încheia sesiunea
+            fetch("../php/sesion_close.php")
+                .then(response => response.text())
+                .then(data => {
+                    // Afișează un mesaj sau efectuează alte acțiuni după încheierea sesiunii
+                    alert(data);
+                });
+        });
+    </script>
+        <script src="limba.js"></script>
+
+</body>
+</html>

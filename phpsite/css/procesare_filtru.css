@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.produs {
+    position: relative;
+    width: 30%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: 1s;
+}
+
+.produs img {
+ 
+    margin-bottom: 10px;
+}
+
+.produs h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.produs p {
+    font-size: 14px;
+    color: #666;
+}
+
+.produs p.pret {
+    font-weight: bold;
+    color: #f00; 
+}
+
+
+.produs:hover {
+    transform: scale(1.05);
+}

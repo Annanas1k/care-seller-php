@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Înregistrare</title>
+    <link rel="stylesheet" href="../css/register.css"> <!-- Adăugați fișierul CSS pentru stilizare -->
+</head>
+<body>
+    <h1>Înregistrare Utilizator</h1>
+    <form action="../php/register.php" method="POST">
+        <label for="nume">Nume complet:</label>
+        <input type="text" id="nume" name="nume" required>
+
+        <label for="username">Nume de utilizator:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="parola">Parolă:</label>
+        <input type="password" id="parola" name="parola" required>
+
+        <label for="locatie">Locație:</label>
+        <input type="text" id="locatie" name="locatie" required>
+
+        <label for="numar_telefon">Număr de telefon:</label>
+        <input type="text" id="numar_telefon" name="numar_telefon" required>
+
+        <input type="submit" value="Înregistrare">
+    </form>
+</body>
+</html>
